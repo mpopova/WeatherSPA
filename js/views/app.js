@@ -31,8 +31,15 @@ $(document).ready( function(){
             }, this ) ); // $.proxy is a useful way of passing the parent object to the anonymous function
         },
         ajaxGetWeathers: function( query ){
-            // Google is damn fast, return the ajax function to pass the promise() test in the $.when statement
-            var ajaxQuery =  $.ajax("http://api.apixu.com/v1/forecast.json?key=c1f93b42acf84432a1482548172310&q=" + query + "&days=5");
+            var url="http://api.apixu.com/v1/forecast.json?key=c1f93b42acf84432a1482548172310&q=" + 
+                    query + "&days=5";
+                    
+            var ajaxQuery = $.ajax({
+                type: "get", 
+                url: url,
+                timeout: 250,
+            }); 
+
             return ajaxQuery; 
         }
     
