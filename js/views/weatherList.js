@@ -3,7 +3,7 @@ $(document).ready( function(){
         el: $("#weatherList"), // Every view has a element associated with it
         initialize: function(){
             // Set the initial content of the view
-            this.el.html("Type to search for city weather");
+            // this.el.html("Type to search for city weather");
         },
         renderList: function( collection ){
             // This function is called when the collection "listens"

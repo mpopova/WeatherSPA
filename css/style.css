@@ -1,0 +1,32 @@
+body{
+	background: #2196F3;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+#appview{
+    margin: 10px;
+    overflow: hidden;
+}
+
+#searchbox{
+	border: 0;
+    border-bottom: 2px solid #1976D2;
+    width: 100%;
+    font-size: 30px;
+    line-height: 35px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+    color: #BBDEFB;
+}
+
+input#searchbox::-webkit-input-placeholder{
+    color: #1976D2;
+}
+input#searchbox:-moz-placeholder {
+    color: #1976D2;
+}
