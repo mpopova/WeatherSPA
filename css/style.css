@@ -23,10 +23,36 @@ body{
     background: transparent;
     color: #BBDEFB;
 }
+@media(max-width: 992px){
+	#searchbox{
+		font-size: 20px;
+		padding: 0; 
+		height: 35px;
+	}
+}
 
 input#searchbox::-webkit-input-placeholder{
     color: #1976D2;
 }
 input#searchbox:-moz-placeholder {
     color: #1976D2;
+}
+
+#weatherList{
+	text-align: center;
+    margin: 40px 0;
+}
+
+.weatherDayBox{
+	display: inline-block;
+    text-align: left;
+    background: #0076d4;
+    padding: 15px;
+    border-radius: 12px;
+    height: 120px;
+    margin: 7px;
+}
+
+.weatherDayBox div span{
+	float: right;
 }
