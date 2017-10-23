@@ -14,6 +14,12 @@ $(document).ready( function(){
             // Once compiled we can call our template and pass it any 
             // matching data we have and append it to our view.el
             collection.weatherList.el.html( compiled_template( { weathers: collection.models } ) );
+
+            // Compilation with Handlebar, but unfortunately return error - .toJSON() is not defined  ;(
+            //  var tpl = function () {
+            //      return Handlebars.compile($("#weatherPerDay").html());
+            // }
+            // collection.weatherList.el.html(tpl(collection.models.model.toJSON()));
         }
     });
 })
