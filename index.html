@@ -27,16 +27,14 @@
 	    <!-- For handlebar use type="text/x-handlebars-template" -->
 	    <script type="text/template" id="weatherPerDay">
 
-            <% _.each( weathers, function( day_item ){ %>
-            	<div class="weatherDayBox">
-		            <h3><%= day_item.get("date") %></h3>
-		            <div>Min t: <span><%= day_item.get("day").mintemp_c %></span></div>
-		            <div>Max t: <span><%= day_item.get("day").maxtemp_c %></span></div>
-	       		</div>
-
-            <% }); %>
+		  {{#each weathers}}
+		  <div class="weatherDayBox">
+		  	<h3> {{this.attributes.date}}</h3>
+			<div>Min t: <span>{{this.attributes.day.maxtemp_c}}</span></div>
+			<div>Max t: <span>{{this.attributes.day.mintemp_c}}</span></div>
+		    </div>
+		  {{/each}}
 
         </script>
-    
 	</body>
 </html>
